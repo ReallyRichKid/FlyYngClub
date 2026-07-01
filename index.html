@@ -1,149 +1,284 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Purple Adult Style Pack List</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #1a0b1e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Segoe UI', Arial, sans-serif;
-  }
-  .card {
-    background: radial-gradient(circle at 30% 30%, #3d1a4a, #120315);
-    width: 900px;
-    padding: 40px 30px 30px 30px;
-    border-radius: 30px;
-    box-shadow: 0 0 80px rgba(180, 0, 255, 0.4), inset 0 0 60px rgba(200, 50, 255, 0.1);
-    border: 1px solid #9b4dca;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .columns {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .column {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .column h3 {
-    color: #e8c8ff;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-bottom: 1px solid #b06ad0;
-    padding-bottom: 8px;
-    margin-bottom: 5px;
-    text-shadow: 0 0 10px #b06ad0;
-  }
-  .item {
-    color: #f5e6ff;
-    font-size: 16px;
-    line-height: 1.5;
-    background: rgba(80, 20, 100, 0.3);
-    padding: 10px 14px;
-    border-radius: 12px;
-    border-left: 3px solid #d48cff;
-    backdrop-filter: blur(2px);
-    transition: 0.2s;
-    box-shadow: 0 0 15px rgba(200, 100, 255, 0.1);
-  }
-  .item:hover {
-    background: rgba(120, 40, 150, 0.5);
-    box-shadow: 0 0 25px #b259e0;
-  }
-  .item small {
-    color: #c99be0;
-    font-weight: 300;
-  }
-  .divider {
-    width: 2px;
-    background: linear-gradient(to bottom, #ff66ff, #7700aa, #ff66ff);
-    box-shadow: 0 0 30px #ff44ff, 0 0 60px #aa00ff;
-    border-radius: 2px;
-    margin: 0 10px;
-  }
-  .left .item { border-left-color: #ff88ff; }
-  .right .item { border-left-color: #ff66aa; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>FYC shop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* Кнопка */
-  .btn {
-    display: inline-block;
-    padding: 16px 40px;
-    background: linear-gradient(135deg, #a64dff, #6600cc);
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;
-    border: 1px solid #d48cff;
-    box-shadow: 0 0 30px rgba(160, 0, 255, 0.5);
-    transition: all 0.3s ease;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.4;
-  }
-  .btn:hover {
-    background: linear-gradient(135deg, #c07aff, #7a00e6);
-    box-shadow: 0 0 60px #b259e0, 0 0 100px #8800ff;
-    transform: scale(1.05);
-    border-color: #ff88ff;
-  }
-  .btn:active {
-    transform: scale(0.95);
-  }
-  .btn .line {
-    display: block;
-  }
-  .btn .line + .line {
-    margin-top: 4px;
-  }
-</style>
+    body {
+      background: linear-gradient(145deg, #0b0b0f 0%, #1a1a24 100%);
+      font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #eaeaea;
+    }
+
+    .main-container {
+      max-width: 950px;
+      width: 100%;
+      background: rgba(18, 18, 26, 0.8);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 3rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(255, 255, 255, 0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      background: linear-gradient(180deg, #f8e3ff 0%, #c084fc 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 18px #b374f0);
+      margin-bottom: 0.5rem;
+      word-break: break-word;
+    }
+
+    .dual-blocks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: center;
+    }
+
+    .lang-block {
+      flex: 1 1 280px;
+      background: rgba(10, 10, 18, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid rgba(200, 180, 255, 0.2);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease;
+    }
+
+    .lang-block:hover {
+      transform: translateY(-4px);
+      border-color: rgba(220, 190, 255, 0.4);
+    }
+
+    .lang-block h2 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      border-bottom: 2px dashed #b98aff;
+      padding-bottom: 0.5rem;
+      color: #ddc5ff;
+      letter-spacing: 1px;
+    }
+
+    .pack-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .pack-item {
+      background: rgba(30, 30, 45, 0.55);
+      border-radius: 1.2rem;
+      padding: 0.9rem 1.2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-left: 4px solid #c77dff;
+      color: #f0e7ff;
+      backdrop-filter: blur(4px);
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .right-block .pack-item {
+      border-left-color: #ff8cc8;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0.5rem 0 1.2rem;
+    }
+
+    .btn-buy {
+      background: radial-gradient(circle at 30% 20%, #b76eff, #5f3b9a);
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 4rem;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: #fff5fb;
+      text-shadow: 0 2px 10px black;
+      box-shadow: 0 10px 25px rgba(180, 100, 255, 0.6), 0 0 20px #c084fc;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      flex: 1 1 auto;
+      min-width: 180px;
+    }
+
+    .btn-buy:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 35px #c77dff, 0 0 35px #d59bf6;
+      background: radial-gradient(circle at 30% 20%, #cf8eff, #7648c1);
+      color: white;
+    }
+
+    /* Кнопка FREE PACK */
+    .free-pack-button-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.8rem;
+    }
+
+    .btn-free-pack {
+      background: radial-gradient(circle at 30% 20%, #ff7eb3, #c44a8c);
+      border: none;
+      padding: 1rem 3.5rem;
+      border-radius: 4rem;
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: 2px;
+      color: #fff0f5;
+      text-shadow: 0 2px 10px #4a0030;
+      box-shadow: 0 12px 28px rgba(255, 105, 180, 0.65), 0 0 30px #ff69b4;
+      cursor: pointer;
+      transition: 0.25s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-free-pack:hover {
+      transform: scale(1.05);
+      box-shadow: 0 18px 40px #ff3b7f, 0 0 45px #ff99cc;
+      background: radial-gradient(circle at 30% 20%, #ff94c2, #d94f8c);
+    }
+
+    /* Изображение под кнопкой */
+    .free-pack-image {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .free-pack-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(255, 200, 230, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .free-pack-image img:hover {
+      transform: scale(1.02);
+      border-color: #ffb6d9;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .main-container {
+        padding: 1.8rem 1.2rem;
+        border-radius: 2.2rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      .btn-buy {
+        font-size: 1.2rem;
+        padding: 0.9rem 1.5rem;
+        min-width: 140px;
+      }
+      .btn-free-pack {
+        font-size: 1.4rem;
+        padding: 0.9rem 2.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="card">
-  <!-- Две колонки -->
-  <div class="columns">
-    <!-- Левая колонка (английский) -->
-    <div class="column left">
-      <h3>🇬🇧 English</h3>
-      <div class="item"><b>Testing Pack</b> – test pack <small>(without tin)</small></div>
-      <div class="item"><b>One Pack</b> – mini pack <small>(ages 16 to 18)</small></div>
-      <div class="item"><b>Two Pack</b> – medium pack <small>(ages 10 to 18)</small></div>
-      <div class="item"><b>Three Pack</b> – large pack <small>(ages 6 to 18)</small></div>
-      <div class="item"><b>Four Pack</b> – all packs <small>(ages 0 to 18)</small></div>
+  <div class="main-container">
+    <h1>FYC shop</h1>
+
+    <!-- Два раздельных блока: слева ENG, справа RUS -->
+    <div class="dual-blocks">
+      <!-- Левый блок: английские описания -->
+      <div class="lang-block left-block">
+        <h2>🇬🇧 ENG</h2>
+        <div class="pack-list">
+          <div class="pack-item">Testing Pack - test pack (without tin)</div>
+          <div class="pack-item">One Pack - mini pack (ages 16 to 18)</div>
+          <div class="pack-item">Two Pack - medium pack (ages 10 to 18)</div>
+          <div class="pack-item">Three Pack - large pack (ages 6 to 18)</div>
+          <div class="pack-item">Four Pack - all packs (ages 0 to 18)</div>
+        </div>
+      </div>
+
+      <!-- Правый блок: русские описания -->
+      <div class="lang-block right-block">
+        <h2>🇷🇺 RUS</h2>
+        <div class="pack-list">
+          <div class="pack-item">Testing Pack - тестовый пак (без жести)</div>
+          <div class="pack-item">One Pack - мини пак (от 16 до 18 лет)</div>
+          <div class="pack-item">Two Pack - средний пак (от 10 до 18 лет)</div>
+          <div class="pack-item">Three Pack - большой пак (от 6 до 18 лет)</div>
+          <div class="pack-item">Four Pack - все паки (от 0 до 18 лет)</div>
+        </div>
+      </div>
     </div>
 
-    <!-- Разделитель -->
-    <div class="divider"></div>
+    <!-- Две кнопки Buy Pack / Купить Пак со ссылкой -->
+    <div class="button-row">
+      <a href="https://t.me/sbpooprojectbot" target="_blank" rel="noopener noreferrer" class="btn-buy">
+        💦Buy Pack💦
+      </a>
+      <a href="https://t.me/sbpooprojectbot" target="_blank" rel="noopener noreferrer" class="btn-buy">
+        💦Купить Пак💦
+      </a>
+    </div>
 
-    <!-- Правая колонка (русский) -->
-    <div class="column right">
-      <h3>🇷🇺 Русский</h3>
-      <div class="item"><b>Testing Pack</b> – тестовый пак <small>(без жести)</small></div>
-      <div class="item"><b>One Pack</b> – мини пак <small>(от 16 до 18 лет)</small></div>
-      <div class="item"><b>Two Pack</b> – средний пак <small>(от 10 до 18 лет)</small></div>
-      <div class="item"><b>Three Pack</b> – большой пак <small>(от 6 до 18 лет)</small></div>
-      <div class="item"><b>Four Pack</b> – все паки <small>(от 0 до 18 лет)</small></div>
+    <!-- Кнопка FREE PACK -->
+    <div class="free-pack-button-wrapper">
+      <a href="https://docs.google.com/document/d/1jmdph4Q5ttDx7_WINylTtbThemWVa6SC2U0oSgYbLZc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-free-pack">
+        FREE PACK
+      </a>
+    </div>
+
+    <!-- Изображение под кнопкой FREE PACK -->
+    <div class="free-pack-image">
+      <img src="https://sun9-32.userapi.com/s/v1/ig2/YPG01V-9sSmq4t7_tgByGnqral2MXJbaUwavCfxTpKpuXkpu2ajnboQKht1qyQX8aWPkuVIQf1JS8pIFd4Yb8P21.jpg?quality=95&crop=0,0,1000,1000&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1000x1000&from=bu&u=_sYiwXvlKTPdFECr-PCuk470a_U27ttfMKGELVthZYE&cs=1000x0" alt="Free Pack Image" loading="lazy">
     </div>
   </div>
-
-  <!-- Кнопка по центру внизу -->
-  <a href="https://link.me/cookiepie" class="btn" target="_blank">
-    <span class="line">🔞Купить Паки🔞</span>
-    <span class="line">🔞Buy Pack🔞</span>
-  </a>
-</div>
 </body>
 </html>
